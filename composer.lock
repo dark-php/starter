@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "669bbc059adb10c339f53b1d73a1f7f1",
+    "content-hash": "d9ec7230cdc4e7afc3822125fff5fbc1",
     "packages": [
         {
             "name": "aura/sqlquery",
@@ -144,16 +144,16 @@
         },
         {
             "name": "darktec/router",
-            "version": "1.0.0-alpha.2",
+            "version": "1.0.0-alpha.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dark-php/router.git",
-                "reference": "02297a0f86d0218f2286ffdd17daceb0be395d2d"
+                "reference": "d72254017907c2a1588ff50e3932dc585d20f003"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dark-php/router/zipball/02297a0f86d0218f2286ffdd17daceb0be395d2d",
-                "reference": "02297a0f86d0218f2286ffdd17daceb0be395d2d",
+                "url": "https://api.github.com/repos/dark-php/router/zipball/d72254017907c2a1588ff50e3932dc585d20f003",
+                "reference": "d72254017907c2a1588ff50e3932dc585d20f003",
                 "shasum": ""
             },
             "require": {
@@ -193,9 +193,9 @@
             ],
             "support": {
                 "issues": "https://github.com/dark-php/router/issues",
-                "source": "https://github.com/dark-php/router/tree/1.0.0-alpha.2"
+                "source": "https://github.com/dark-php/router/tree/1.0.0-alpha.3"
             },
-            "time": "2024-10-21T23:03:28+00:00"
+            "time": "2024-10-22T00:29:32+00:00"
         },
         {
             "name": "darktec/util",
@@ -2431,7 +2431,7 @@
     },
     "prefer-stable": false,
     "prefer-lowest": false,
-    "platform": [],
-    "platform-dev": [],
+    "platform": {},
+    "platform-dev": {},
     "plugin-api-version": "2.6.0"
 }
