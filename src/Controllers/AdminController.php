@@ -6,7 +6,7 @@ use DarkTec\Starter\Helpers\Blade;
 use DarkTec\Http\Controller;
 use DarkTec\Starter\Helpers\DB;
 
-class HomeController extends Controller
+class AdminController extends Controller
 {
 
     private \Lexdubyna\Blade\Blade $blade;
@@ -18,6 +18,6 @@ class HomeController extends Controller
     }
     public function index()
     {
-        return $this->blade->make('homepage', ['name' => 'John Doe'])->render();
+        return $this->blade->make('admin.dashboard', ['name' => 'John Doe'])->render();
     }
 }

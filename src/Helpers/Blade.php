@@ -1,22 +1,25 @@
 <?php
 
-namespace Darkmantle\Starter\Helpers;
-use Darkmantle\Starter\Components\Alert;
-use Darkmantle\Starter\Components\Layout;
+namespace DarkTec\Starter\Helpers;
+use DarkTec\Starter\Components\Alert;
+use DarkTec\Starter\Components\Layout;
+use DarkTec\Starter\Components\Forms\LoginForm;
 
 class Blade {
 
-    private \Lexdubyna\Blade\Blade $blade;
+    private static ?\Lexdubyna\Blade\Blade $blade = null;
 
-    public function __construct() {
-        $this->blade = new \Lexdubyna\Blade\Blade('views', 'cache');
-        $this->blade->compiler()->components([
-            'alert' => Alert::class,
-            'layout' => Layout::class
-        ]);
-    }
+    public static function getBlade() {
 
-    public function getBlade() {
-        return $this->blade;
+        if (self::$blade == null) {
+            self::$blade = new \Lexdubyna\Blade\Blade('views', 'cache');
+            self::$blade->compiler()->components([
+                'alert' => Alert::class,
+                'layout' => Layout::class,
+                'loginForm' => LoginForm::class
+            ]);
+        }
+
+        return self::$blade;
     }
 }

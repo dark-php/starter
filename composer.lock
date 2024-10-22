@@ -4,8 +4,75 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2912f1664473de0dbf58bd4e0d0aad6e",
+    "content-hash": "669bbc059adb10c339f53b1d73a1f7f1",
     "packages": [
+        {
+            "name": "aura/sqlquery",
+            "version": "3.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/auraphp/Aura.SqlQuery.git",
+                "reference": "6f71a3b82d7018dff437cdd316f3eb851fd3713c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/auraphp/Aura.SqlQuery/zipball/6f71a3b82d7018dff437cdd316f3eb851fd3713c",
+                "reference": "6f71a3b82d7018dff437cdd316f3eb851fd3713c",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.6"
+            },
+            "require-dev": {
+                "ext-pdo_sqlite": "*",
+                "yoast/phpunit-polyfills": "^1.0"
+            },
+            "suggest": {
+                "aura/sql": "Provides an extension to the native PDO along with a profiler and connection locator."
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Aura\\SqlQuery\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Aura.SqlQuery Contributors",
+                    "homepage": "https://github.com/auraphp/Aura.SqlQuery/contributors"
+                }
+            ],
+            "description": "Object-oriented query builders for MySQL, Postgres, SQLite, and SQLServer; can be used with any database connection library.",
+            "homepage": "https://github.com/auraphp/Aura.SqlQuery",
+            "keywords": [
+                "database",
+                "db",
+                "delete",
+                "dml",
+                "insert",
+                "mysql",
+                "pdo",
+                "pgsql",
+                "postgres",
+                "postgresql",
+                "query",
+                "select",
+                "sql",
+                "sql server",
+                "sqlite",
+                "sqlserver",
+                "update"
+            ],
+            "support": {
+                "issues": "https://github.com/auraphp/Aura.SqlQuery/issues",
+                "source": "https://github.com/auraphp/Aura.SqlQuery/tree/3.0.0"
+            },
+            "time": "2023-04-25T13:21:16+00:00"
+        },
         {
             "name": "carbonphp/carbon-doctrine-types",
             "version": "3.2.0",
@@ -77,20 +144,20 @@
         },
         {
             "name": "darktec/router",
-            "version": "1.0.9",
+            "version": "1.0.0-alpha.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dark-php/router.git",
-                "reference": "095c3a6b17f93d5d5bbc5e8b20919185b47256b0"
+                "reference": "02297a0f86d0218f2286ffdd17daceb0be395d2d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dark-php/router/zipball/095c3a6b17f93d5d5bbc5e8b20919185b47256b0",
-                "reference": "095c3a6b17f93d5d5bbc5e8b20919185b47256b0",
+                "url": "https://api.github.com/repos/dark-php/router/zipball/02297a0f86d0218f2286ffdd17daceb0be395d2d",
+                "reference": "02297a0f86d0218f2286ffdd17daceb0be395d2d",
                 "shasum": ""
             },
             "require": {
-                "darktec/util": "1.0.*",
+                "darktec/util": "1.0.0-alpha.1",
                 "doctrine/cache": "2.2.0",
                 "php": ">=8.0",
                 "php-di/php-di": "^7.0"
@@ -101,7 +168,7 @@
             "type": "library",
             "autoload": {
                 "psr-4": {
-                    "Darktec\\": "src"
+                    "DarkTec\\": "src"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -117,7 +184,7 @@
                 }
             ],
             "description": "Routing package for PHP 8",
-            "homepage": "https://github.com/darktec/router",
+            "homepage": "https://github.com/dark-php/router",
             "keywords": [
                 "PHP7",
                 "route",
@@ -126,13 +193,13 @@
             ],
             "support": {
                 "issues": "https://github.com/dark-php/router/issues",
-                "source": "https://github.com/dark-php/router/tree/1.0.9"
+                "source": "https://github.com/dark-php/router/tree/1.0.0-alpha.2"
             },
-            "time": "2024-10-17T22:23:50+00:00"
+            "time": "2024-10-21T23:03:28+00:00"
         },
         {
             "name": "darktec/util",
-            "version": "1.0.3",
+            "version": "1.0.0-alpha.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dark-php/util.git",
@@ -176,7 +243,7 @@
             ],
             "support": {
                 "issues": "https://github.com/dark-php/util/issues",
-                "source": "https://github.com/dark-php/util/tree/1.0.3"
+                "source": "https://github.com/dark-php/util/tree/1.0.0-alpha.1"
             },
             "time": "2024-10-17T22:02:06+00:00"
         },
@@ -363,64 +430,6 @@
                 }
             ],
             "time": "2024-02-18T20:23:39+00:00"
-        },
-        {
-            "name": "envms/fluentpdo",
-            "version": "v2.2.4",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/envms/fluentpdo.git",
-                "reference": "1985e0e8406a56140f387bc9bec786b419cbeccc"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/envms/fluentpdo/zipball/1985e0e8406a56140f387bc9bec786b419cbeccc",
-                "reference": "1985e0e8406a56140f387bc9bec786b419cbeccc",
-                "shasum": ""
-            },
-            "require": {
-                "ext-pdo": "*",
-                "php": ">=7.1"
-            },
-            "require-dev": {
-                "envms/fluent-test": "^1.0",
-                "phpunit/phpunit": "^8.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Envms\\FluentPDO\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "Apache-2.0",
-                "GPL-2.0+"
-            ],
-            "authors": [
-                {
-                    "name": "envms",
-                    "homepage": "https://env.ms"
-                }
-            ],
-            "description": "FluentPDO is a quick and light PHP library for rapid query building. It features a smart join builder, which automatically creates table joins.",
-            "homepage": "https://github.com/envms/fluentpdo",
-            "keywords": [
-                "builder",
-                "database",
-                "db",
-                "dbal",
-                "fluent",
-                "mysql",
-                "oracle",
-                "pdo",
-                "query"
-            ],
-            "support": {
-                "issues": "https://github.com/envms/fluentpdo/issues",
-                "source": "https://github.com/envms/fluentpdo/tree/v2.2.4"
-            },
-            "time": "2022-01-27T21:49:44+00:00"
         },
         {
             "name": "filp/whoops",
@@ -2416,7 +2425,10 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "darktec/router": 15,
+        "darktec/util": 15
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],

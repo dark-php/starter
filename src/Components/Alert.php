@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Darkmantle\Starter\Components;
+namespace DarkTec\Starter\Components;
 
 use Lexdubyna\Blade\ViewComponent;
 

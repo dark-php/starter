@@ -1,10 +1,8 @@
 <?php
-namespace Darkmantle\Starter\Controllers;
-use Darkmantle\Starter\Helpers\Blade;
-use Darktec\Http\Controller;
-use DI\Container;
-
-
+namespace DarkTec\Starter\Controllers;
+use DarkTec\Starter\Helpers\Blade;
+use DarkTec\Http\Controller;
+use DarkTec\Starter\Helpers\Auth;
 
 class AuthController extends Controller
 {
@@ -24,6 +22,22 @@ class AuthController extends Controller
 
     public function loginPost() {
 
+        $login = Auth::login($_POST['username'], $_POST['password']);
+
+        if ($login) {
+            header('Location: /dashboard', true, 303);
+            exit();
+        } else {
+            header('Location: /login', true, 303);
+        }
+
+    }
+
+    public function logout() {
+        Auth::logout();
+
+        header('Location: /', true, 303);
+        exit();
     }
 
     public function registerGet() {
