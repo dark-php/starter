@@ -2,8 +2,8 @@
 
 namespace DarkTec\Starter\Components\Forms;
 
-use DarkTec\Starter\Helpers\Auth;
-use DarkTec\Starter\Helpers\Container;
+use Darktec\Helpers\Auth;
+use Darktec\Helpers\Container;
 use Lexdubyna\Blade\ViewComponent;
 
 class LoginForm extends ViewComponent

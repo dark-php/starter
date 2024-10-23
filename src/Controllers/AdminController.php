@@ -2,9 +2,9 @@
 
 namespace DarkTec\Starter\Controllers;
 
-use DarkTec\Starter\Helpers\Blade;
+use Darktec\Helpers\Blade;
 use DarkTec\Http\Controller;
-use DarkTec\Starter\Helpers\DB;
+use Darktec\Helpers\DB;
 
 class AdminController extends Controller
 {

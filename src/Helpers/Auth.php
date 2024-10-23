@@ -1,6 +1,6 @@
 <?php
 
-namespace DarkTec\Starter\Helpers;
+namespace Darktec\Helpers;
 
 class Auth
 {

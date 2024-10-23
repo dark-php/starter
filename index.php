@@ -1,55 +1,24 @@
 <?php
-session_start();
 require 'vendor/autoload.php';
 
-use DarkTec\Http\Request;
-use DarkTec\Http\MiddlewareEngine;
-use DarkTec\Router\Router;
-use DarkTec\Starter\Helpers\Container;
-use DarkTec\Starter\Helpers\DB;
-use Dotenv\Dotenv;
+use Darktec\Application;
+use DarkTec\Helpers\Blade;
+use DarkTec\Starter\Components\Alert;
+use DarkTec\Starter\Components\Forms\LoginForm;
+use DarkTec\Starter\Components\Layout;
 
-// Load env files
-$dotenv = Dotenv::createImmutable(__DIR__);
-$dotenv->safeLoad();
+// Create application instance
+$application = new Application();
 
-// Create Di container
-$container = Container::getInstance();
-
-// Load all config and add into container
-$config = [];
-$directory = __DIR__ . '/config';
-$iterator = new RecursiveIteratorIterator(
-    new RecursiveDirectoryIterator($directory, RecursiveDirectoryIterator::SKIP_DOTS),
-    RecursiveIteratorIterator::SELF_FIRST
-);
-
-foreach ($iterator as $item) {
-    $path = $item->getPathname();
-    $filename = str_replace('.php', '', $item->getFilename());
-    if ($item->isFile()) {
-        $config[$filename] = include $path;
-    }
-}
-
-$container->set('config', $config);
-
-
-// Error handling
-$whoops = new \Whoops\Run;
-$whoops->pushHandler(new \Whoops\Handler\PrettyPageHandler);
-$whoops->register();
-
-// Global middlewares
-$middleware = new MiddlewareEngine(new Request());
-$container->set('middlewareEngine', $middleware);
-
-// Init DB singleton
-DB::init();
-
-// Init router and set routes
-Router::init($container);
+// Add routes
 require 'src/routes.php';
 
+// Register Blade components
+Blade::addComponents([
+    Layout::class,
+    Alert::class,
+    LoginForm::class
+]);
 
-Router::match($_SERVER['REQUEST_METHOD'], strtok($_SERVER["REQUEST_URI"], '?'));
+// Start the app
+$application->start();

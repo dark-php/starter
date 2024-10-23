@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d9ec7230cdc4e7afc3822125fff5fbc1",
+    "content-hash": "a3d22333d69769fed7b936b90136c0cc",
     "packages": [
         {
             "name": "aura/sqlquery",
@@ -143,26 +143,74 @@
             "time": "2024-02-09T16:56:22+00:00"
         },
         {
-            "name": "darktec/router",
-            "version": "1.0.0-alpha.3",
+            "name": "darktec/application",
+            "version": "1.0.0-alpha.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/dark-php/router.git",
-                "reference": "d72254017907c2a1588ff50e3932dc585d20f003"
+                "url": "https://github.com/dark-php/application.git",
+                "reference": "f87df31001cb2f053d4a596c897b5ad05903d070"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dark-php/router/zipball/d72254017907c2a1588ff50e3932dc585d20f003",
-                "reference": "d72254017907c2a1588ff50e3932dc585d20f003",
+                "url": "https://api.github.com/repos/dark-php/application/zipball/f87df31001cb2f053d4a596c897b5ad05903d070",
+                "reference": "f87df31001cb2f053d4a596c897b5ad05903d070",
+                "shasum": ""
+            },
+            "require": {
+                "darktec/router": "1.0.0-alpha.1",
+                "darktec/util": "1.0.0-alpha.1",
+                "filp/whoops": "^2.16",
+                "vlucas/phpdotenv": "^5.6"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^10.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Darktec\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "David Hopson",
+                    "email": "mantle@hotmail.co.uk",
+                    "homepage": "http://github.com/darkmantle",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Application Package",
+            "homepage": "https://github.com/dark-php/application",
+            "support": {
+                "issues": "https://github.com/dark-php/application/issues",
+                "source": "https://github.com/dark-php/application/tree/1.0.0-alpha.1"
+            },
+            "time": "2024-10-23T20:02:34+00:00"
+        },
+        {
+            "name": "darktec/router",
+            "version": "1.0.0-alpha.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dark-php/router.git",
+                "reference": "591f7d5b59abcae255e3510e098ccc84be5fa404"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/dark-php/router/zipball/591f7d5b59abcae255e3510e098ccc84be5fa404",
+                "reference": "591f7d5b59abcae255e3510e098ccc84be5fa404",
                 "shasum": ""
             },
             "require": {
                 "darktec/util": "1.0.0-alpha.1",
-                "doctrine/cache": "2.2.0",
-                "php": ">=8.0",
-                "php-di/php-di": "^7.0"
+                "php": ">=8.0"
             },
             "require-dev": {
+                "php-di/php-di": "^7.0",
                 "phpunit/phpunit": "^10.0"
             },
             "type": "library",
@@ -186,16 +234,16 @@
             "description": "Routing package for PHP 8",
             "homepage": "https://github.com/dark-php/router",
             "keywords": [
-                "PHP7",
+                "php8",
                 "route",
                 "router",
                 "routing"
             ],
             "support": {
                 "issues": "https://github.com/dark-php/router/issues",
-                "source": "https://github.com/dark-php/router/tree/1.0.0-alpha.3"
+                "source": "https://github.com/dark-php/router/tree/1.0.0-alpha.1"
             },
-            "time": "2024-10-22T00:29:32+00:00"
+            "time": "2024-10-23T19:53:45+00:00"
         },
         {
             "name": "darktec/util",
@@ -203,16 +251,19 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/dark-php/util.git",
-                "reference": "caba67159a474927e2990b0b7cbcc7568ac687ba"
+                "reference": "6f6039d0e7bbc7d4ace930db660e9cfc667a3ab5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dark-php/util/zipball/caba67159a474927e2990b0b7cbcc7568ac687ba",
-                "reference": "caba67159a474927e2990b0b7cbcc7568ac687ba",
+                "url": "https://api.github.com/repos/dark-php/util/zipball/6f6039d0e7bbc7d4ace930db660e9cfc667a3ab5",
+                "reference": "6f6039d0e7bbc7d4ace930db660e9cfc667a3ab5",
                 "shasum": ""
             },
             "require": {
-                "php": ">=8"
+                "aura/sqlquery": "^3.0",
+                "lexdubyna/blade": "^1.5",
+                "php": ">=8",
+                "php-di/php-di": "^7.0"
             },
             "require-dev": {
                 "phpunit/phpunit": "10.0.*"
@@ -245,100 +296,7 @@
                 "issues": "https://github.com/dark-php/util/issues",
                 "source": "https://github.com/dark-php/util/tree/1.0.0-alpha.1"
             },
-            "time": "2024-10-17T22:02:06+00:00"
-        },
-        {
-            "name": "doctrine/cache",
-            "version": "2.2.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/doctrine/cache.git",
-                "reference": "1ca8f21980e770095a31456042471a57bc4c68fb"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/cache/zipball/1ca8f21980e770095a31456042471a57bc4c68fb",
-                "reference": "1ca8f21980e770095a31456042471a57bc4c68fb",
-                "shasum": ""
-            },
-            "require": {
-                "php": "~7.1 || ^8.0"
-            },
-            "conflict": {
-                "doctrine/common": ">2.2,<2.4"
-            },
-            "require-dev": {
-                "cache/integration-tests": "dev-master",
-                "doctrine/coding-standard": "^9",
-                "phpunit/phpunit": "^7.5 || ^8.5 || ^9.5",
-                "psr/cache": "^1.0 || ^2.0 || ^3.0",
-                "symfony/cache": "^4.4 || ^5.4 || ^6",
-                "symfony/var-exporter": "^4.4 || ^5.4 || ^6"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Doctrine\\Common\\Cache\\": "lib/Doctrine/Common/Cache"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Guilherme Blanco",
-                    "email": "guilhermeblanco@gmail.com"
-                },
-                {
-                    "name": "Roman Borschel",
-                    "email": "roman@code-factory.org"
-                },
-                {
-                    "name": "Benjamin Eberlei",
-                    "email": "kontakt@beberlei.de"
-                },
-                {
-                    "name": "Jonathan Wage",
-                    "email": "jonwage@gmail.com"
-                },
-                {
-                    "name": "Johannes Schmitt",
-                    "email": "schmittjoh@gmail.com"
-                }
-            ],
-            "description": "PHP Doctrine Cache library is a popular cache implementation that supports many different drivers such as redis, memcache, apc, mongodb and others.",
-            "homepage": "https://www.doctrine-project.org/projects/cache.html",
-            "keywords": [
-                "abstraction",
-                "apcu",
-                "cache",
-                "caching",
-                "couchdb",
-                "memcached",
-                "php",
-                "redis",
-                "xcache"
-            ],
-            "support": {
-                "issues": "https://github.com/doctrine/cache/issues",
-                "source": "https://github.com/doctrine/cache/tree/2.2.0"
-            },
-            "funding": [
-                {
-                    "url": "https://www.doctrine-project.org/sponsorship.html",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://www.patreon.com/phpdoctrine",
-                    "type": "patreon"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/doctrine%2Fcache",
-                    "type": "tidelift"
-                }
-            ],
-            "time": "2022-05-20T20:07:39+00:00"
+            "time": "2024-10-23T20:00:34+00:00"
         },
         {
             "name": "doctrine/inflector",
@@ -2426,6 +2384,7 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
+        "darktec/application": 15,
         "darktec/router": 15,
         "darktec/util": 15
     },

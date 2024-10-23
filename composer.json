@@ -8,12 +8,9 @@
     },
     "minimum-stability": "stable",
     "require": {
-        "darktec/router": "1.0.0-alpha.3",
+        "darktec/router": "1.0.0-alpha.1",
         "darktec/util": "1.0.0-alpha.1",
-        "filp/whoops": "^2.16",
-        "lexdubyna/blade": "^1.5",
-        "vlucas/phpdotenv": "^5.6",
-        "aura/sqlquery": "^3.0"
+        "darktec/application": "1.0.0-alpha.1"
     },
     "config": {
     }

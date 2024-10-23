@@ -3,7 +3,7 @@ namespace DarkTec\Starter\Middleware;
 
 use DarkTec\Http\Middleware;
 use DarkTec\Http\Request;
-use DarkTec\Starter\Helpers\Auth;
+use Darktec\Helpers\Auth;
 
 class AdminGuard extends Middleware {
 

@@ -1,8 +1,8 @@
 <?php
 namespace DarkTec\Starter\Controllers;
-use DarkTec\Starter\Helpers\Blade;
+use Darktec\Helpers\Blade;
 use DarkTec\Http\Controller;
-use DarkTec\Starter\Helpers\Auth;
+use Darktec\Helpers\Auth;
 
 class AuthController extends Controller
 {
